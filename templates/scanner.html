@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Scanner</title>
+    <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
+</head>
+<body>
+
+<div id="interactive" class="viewport"></div>
+<div id="result"></div>
+
+<script>
+    Quagga.init({
+        inputStream: {
+            type: "LiveStream",
+            constraints: {
+                width: 640,
+                height: 480,
+                facingMode: "environment"
+            }
+        },
+        decoder: {
+            readers: ["code_128_reader", "ean_reader", "ean_8_reader", "code_39_reader", "code_39_vin_reader", "codabar_reader", "upc_reader", "upc_e_reader"]
+        }
+    }, function (error) {
+        if (error) {
+            console.log(error);
+            return;
+        }
+        Quagga.start();
+    });
+
+    Quagga.onDetected(function (data) {
+        var code = data.codeResult.code;
+        document.getElementById("result").textContent = code;
+        sendBarcodeToServer(code);
+    });
+
+    function sendBarcodeToServer(barcode) {
+        fetch('/handle_barcode', {
+            method: 'POST',
+            body: JSON.stringify({ barcode: barcode }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+        });
+    }
+</script>
+</body>
+</html>

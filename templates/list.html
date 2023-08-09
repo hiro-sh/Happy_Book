@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books List</title>
+</head>
+<body>
+    <h1>Books List</h1>
+    <div>
+        {% for book in books %}
+        <img src="https://iss.ndl.go.jp/thumbnail/{{book[0]}}" alt="Book Cover">
+        {% endfor %}
+    </div>
+</body>
+</html>
