@@ -3,7 +3,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-DATABASE = '/Users/hiroki/Desktop/Happy_Book/database.db'  # この部分は実際のデータベースファイルのパスに置き換えてください
+DATABASE = '/Users/saato/OneDrive/デスクトップ/Happy_Book/database.db'  # この部分は実際のデータベースファイルのパスに置き換えてください
 
 def get_db():
     db = getattr(g, '_database', None)

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Book List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="app-title"><a href="/">わたしの本だな</a></h1>
+        <div class="member-menu">
+            <a href="/add" class="menu-link"></a>
+            <a href="/myp" class="menu-link"></a>
+            <a href="/logout" class="menu-link">ログアウト</a>
+        </div>
+    </header>
+    <h1 class="c_title">どちらかのボタンをえらんで、おしてください。</h1>
+    <div class="box">
+        <div class="r_btn">
+            <h2 class="c_title">バーコードをよみとるとき</h2>
+            <a class="btn-b">
+                <span class="btn-b-bottom"></span>
+                <span class="btn-b-top"><span>おす</span></span>
+            </a>
+        </div>
+
+
+
+
+        <div class="b_btn">
+            <h2 class="c_title">タイトルか、ＩＳＢＮばんごうを入力するとき</h2>
+            <a class="btn-b">
+                <span class="btn-b-bottom"></span>
+                <span class="btn-b-top"><span>おす</span></span>
+            </a>
+        </div>
+    </div>
+
+
+</body>

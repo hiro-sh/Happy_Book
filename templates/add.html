@@ -13,21 +13,22 @@
     <header class="header">
         <h1 class="app-title"><a href="/">わたしの本だな</a></h1>
         <div class="member-menu">
-            <a href="/add" class="menu-link">本をついか</a>
-            <a href="/myp" class="menu-link">マイページ</a>
+            <a href="/add" class="menu-link"></a>
+            <a href="/myp" class="menu-link"></a>
             <a href="/logout" class="menu-link">ログアウト</a>
         </div>
     </header>
-    <div class="container">
-        <div class="item">
-            {% for book in books %}
-            <img src="https://iss.ndl.go.jp/thumbnail/{{book[0]}}" alt="Book Cover" class="book">
-            {% endfor %}
-            <a href="" class="r_date">８月８日</a>
+    <div class="bookdata">
+        <img src="" alt="" class="book2">
+        <div class="book_title">
+            <h2>タイトル</h2>
+            <h2>作者</h2>
+            <h2>出版社</h2>
+            <h3>日付</h3>
         </div>
-
+        <div class="add_btn">
+            <a href="" class="btn btn--circle">本を <br>ついか <br>+</a>
+        </div>
     </div>
 
 </body>
-
-</html>
