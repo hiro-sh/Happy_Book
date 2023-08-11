@@ -25,29 +25,27 @@ def list_books():
     print(books)
     return render_template('list.html', books=books)
 
-
-
 @app.route('/scanner')
 def barcode_scanner():
     return render_template('scanner.html')
 
-# @app.route('/handle_barcode', methods=['POST'])
-# def handle_barcode():
-#     data = request.get_json()
-#     barcode = data.get('barcode', None)
+@app.route('/handle_barcode', methods=['POST'])
+def handle_barcode():
+    data = request.get_json()
+    barcode = data.get('barcode', None)
 
-#     if barcode:
-#         # ここでバーコードに関連する処理やデータベースの操作を行うことができます。
-#         print(f"Received barcode: {barcode}")
+    if barcode:
+        # ここでバーコードに関連する処理やデータベースの操作を行うことができます。
+        db = get_db()
+        cur = db.cursor()
+        cur.execute("INSERT INTO books (image_path) VALUES (?)", (barcode,))
+        db.commit()
+        print(f"Received barcode: {barcode}")
 
-#         # レスポンスメッセージをカスタマイズすることができます。
-#         return jsonify({"message": f"Received barcode: {barcode}"})
-#     else:
-#         return jsonify({"message": "No barcode received."})
-
+        # レスポンスメッセージをカスタマイズすることができます。
+        return jsonify({"message": f"Received barcode: {barcode}"})
+    else:
+        return jsonify({"message": "No barcode received."})
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
