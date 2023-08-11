@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>わたしの本だな</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-    <h1>わたしの本だな</h1>
-    
     {% for book in books %}
-    <div>
-        <img src="https://iss.ndl.go.jp/thumbnail/{{ book[1] }}" alt="Book Cover">
-        <form action="{{ url_for('delete_book') }}" method="post">
-            <input type="hidden" name="book_id" value="{{ book[0] }}">
-            <button type="submit">本を消す</button>
-        </form>
+    <header class="header">
+        <h1 class="app-title"><a href="/">わたしの本だな</a></h1>
+        <div class="member-menu">
+            <form action="/search_book" method="post">
+                <input class="menu-link" type="submit" value="本だなに本を入れる">
+            </form>
+            <a href="/myp" class="menu-link">マイページ</a>
+            <a href="{{ url_for('logout') }}" class="menu-link btn btn-primary">ログアウト</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="item">
+            <img src="https://iss.ndl.go.jp/thumbnail/{{ book[1] }}" alt="Book Cover">
+            <a href="" class="r_date">８月８日</a>
+            <form action="{{ url_for('delete_book') }}" method="post">
+                <input type="hidden" name="book_id" value="{{ book[0] }}">
+                <button type="submit">本を消す</button>
+            </form>
+        </div>
+
     </div>
     {% endfor %}
-
-    <form action="/search_book" method="post">
-        <input type="submit" value="本だなに本を入れる">
-    </form>
-    <a href="{{ url_for('logout') }}" class="btn btn-primary">ログアウト</a>
 </body>
+
 </html>

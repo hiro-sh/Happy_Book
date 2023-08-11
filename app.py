@@ -3,7 +3,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-DATABASE = '/Users/hiroki/Desktop/Happy_Book/database.db'  # この部分は実際のデータベースファイルのパスに置き換えてください
+DATABASE = '/Users/saato/OneDrive/デスクトップ/Happy_Book/database.db'  # この部分は実際のデータベースファイルのパスに置き換えてください
 
 app.config['SECRET_KEY'] = 'your_secret_key_here'
 
