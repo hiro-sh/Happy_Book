@@ -37,7 +37,7 @@
         document.getElementById("result").textContent = code;
         sendBarcodeToServer(code);
     });
-
+    
     function sendBarcodeToServer(barcode) {
         fetch('/handle_barcode', {
             method: 'POST',
@@ -48,9 +48,17 @@
         })
         .then(response => response.json())
         .then(data => {
-            alert(data.message);
+            if (data.redirect) {
+                window.location.href = data.redirect;
+            }
         });
     }
+
 </script>
+
+<form action="/cancel_add" method="post">
+    <input type="submit" value="本だなにもどる">
+</form>
+
 </body>
 </html>

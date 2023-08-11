@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Barcode Add</title>
 </head>
 <body>
-    <h1>読み込めました</h1>
+
+<h1>この本を本だなに入れる？</h1>
+<img src="https://iss.ndl.go.jp/thumbnail/{{ barcode }}" alt="Book Cover">
+
+<form action="/add_book" method="post">
+    <input type="hidden" name="barcode" value="{{ barcode }}">
+    <input type="submit" value="本だなに入れる">
+</form>
+
+<a href="{{ url_for('search_book') }}" class="btn btn-secondary">Scannerに戻る</a>
+
+<form action="/cancel_add" method="post">
+    <input type="submit" value="本だなにもどる">
+</form>
 </body>
 </html>
