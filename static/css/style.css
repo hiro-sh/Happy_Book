@@ -258,7 +258,6 @@ a.btn--circle i {
 }
 
 
-
 a.btn--circle:hover {
     -webkit-transform: translate(0, 4px);
     transform: translate(0, 4px);
@@ -273,4 +272,35 @@ a.btn--circle:hover {
     right: 0;
     margin: 50px;
 
+}
+
+/*mypage*/
+.re_title1 {
+    font-size: 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 50px;
+}
+
+.re_title2 {
+    font-size: 60px;
+    margin: 50px;
+}
+
+.re_title3 {
+    font-size: 40px;
+    margin: 50px;
+}
+
+.table {
+    font-size: 25px;
+    margin: 50px;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.table th,
+.table td {
+    border: 1px solid #5e5b5b;
+    padding: 8px;
+    text-align: center;
 }
