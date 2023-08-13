@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Add</title>
+</head>
+
+<body>
+
+    <h1>この本を本だなに入れる？</h1>
+    <img src="https://iss.ndl.go.jp/thumbnail/{{ barcode }}" alt="Book Cover">
+    <div class="book_title">
+        <h2>タイトル:</h2>
+        <h2>作者（さくしゃ）:</h2>
+        <h2>出版社（しゅっぱんしゃ）:</h2>
+        <h3>日付（ひづけ）:</h3>
+    </div>
+    <form action="/add_book" method="post">
+        <input type="hidden" name="barcode" value="{{ barcode }}">
+        <input type="submit" value="本だなに入れる">
+
+    </form>
+    <p>どちらかをえらんでください。</p>
+
+    <div id="buttons">
+        <button id="school-library">学校図書館の本である</button>
+        <button id="not-school-library">学校図書館の本ではない</button>
+    </div>
+
+
+
+    <a href="{{ url_for('search_book') }}" class="btn btn-secondary">タイトル入力にもどる</a>
+
+    <form action="/cancel_add" method="post">
+        <input type="submit" value="本だなにもどる">
+    </form>
+</body>
+
+</html>
