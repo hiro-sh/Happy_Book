@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Book List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="app-title"><a href="/">わたしの本だな</a></h1>
+        <div class="member-menu">
+            <a href="/logout" class="menu-link">ログアウト</a>
+        </div>
+    </header>
+    <main class="record">
+        <h1 class="re_title1">わたしのきろく</h1>
+        <div>
+            <h1 class="re_title2">きょうまで 100さつよみました。</h1>
+        </div>
+        <div>
+            <h1 class="re_title3">月別読書冊数表（つきべつどくしょさっすうひょう）</h1>
+            <table border="1" class="table">
+                <tr>
+                    <th>４月</th>
+                    <th>５月</th>
+                    <th>６月</th>
+                    <th>７月</th>
+                    <th>８月</th>
+                    <th>９月</th>
+                    <th>10月</th>
+                    <th>11月</th>
+                    <th>12月</th>
+                    <th>１月</th>
+                    <th>２月</th>
+                    <th>３月</th>
+                    <th>１年</th>
+                </tr>
+                <tr>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                    <td> さつ</td>
+                </tr>
+            </table>
+        </div>
+
+    </main>
+
+
+</body>
