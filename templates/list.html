@@ -16,23 +16,24 @@
             <form action="/search_book" method="post">
                 <input class="menu-link" type="submit" value="本だなに本を入れる">
             </form>
-            <a href="/myp" class="menu-link">マイページ</a>
+            <a href="/mypage" class="menu-link">マイページ</a>
             <a href="{{ url_for('logout') }}" class="menu-link btn btn-primary">ログアウト</a>
         </div>
     </header>
-    {% for book in books %}
-    <div class="container">
+
+    <div class="b_container">
+        {% for book in books %}
         <div class="item">
             <img src="https://iss.ndl.go.jp/thumbnail/{{ book[1] }}" alt="Book Cover">
-            <a href="" class="r_date">８月８日</a>
+            <a href="" class="r_date">読んだ日</a>
             <form action="{{ url_for('delete_book') }}" method="post">
                 <input type="hidden" name="book_id" value="{{ book[0] }}">
                 <button type="submit">本を消す</button>
             </form>
         </div>
-
+        {% endfor %}
     </div>
-    {% endfor %}
+
 </body>
 
 </html>

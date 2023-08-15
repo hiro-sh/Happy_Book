@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
-<body>
+<body id="koku">
     <header class="header">
         <h1 class="app-title"><a href="/">わたしの本だな</a></h1>
         <div class="member-menu">
+            <a href="/add" class="menu-link"></a>
+            <a href="/myp" class="menu-link"></a>
             <a href="/logout" class="menu-link">ログアウト</a>
         </div>
     </header>
@@ -21,7 +23,7 @@
         <div>
             <h1 class="re_title2">きょうまで 100さつよみました。</h1>
         </div>
-        <div>
+        <div class="book_table">
             <h1 class="re_title3">月別読書冊数表（つきべつどくしょさっすうひょう）</h1>
             <table border="1" class="table">
                 <tr>
@@ -55,6 +57,10 @@
                     <td> さつ</td>
                 </tr>
             </table>
+        </div>
+        <div class="greeting">
+            <p>10月12日　５０さつ、おめでとうございます！</p>
+            <p>12月24日　１００さつ、おめでとうございます！！</p>
         </div>
 
     </main>

@@ -110,6 +110,11 @@ def delete_book():
 
     return redirect('/list')
 
+@app.route("/mypage")
+def mypage_get():
+    return render_template("mypage.html")
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
