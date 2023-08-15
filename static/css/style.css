@@ -44,13 +44,73 @@ input {
     color: #ffffff;
 }
 
-.container {
-    height: 650px;
+/*フォーム*/
+.form {
+    padding: 45px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 6px #cccccc;
+}
+
+.form .btn {
+    margin: 0;
+    margin-top: 60px;
+}
+
+.input-item {
+    margin-bottom: 30px;
+}
+
+.input-item label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/*ボタンスタイル*/
+.btn {
+    display: block;
+    width: 300px;
+    height: 48px;
+    margin: 30px auto;
+    border-radius: 4px;
+    line-height: 48px;
+    text-align: center;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn-primary {
+    background-color: #66d670;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    border: 1px solid #66d670;
+    background-color: #ffffff;
+    color: #66d670;
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    background: url("../img/background.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.b_container {
+
     background-color: rgb(241, 241, 100);
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    align-items: baseline;
     padding-top: 25px;
 
 }
@@ -273,4 +333,55 @@ a.btn--circle:hover {
     right: 0;
     margin: 50px;
 
+}
+
+/*mypage*/
+#koku {
+    height: 100vh;
+}
+
+.record {
+
+    background-image: url(../img/myp.png);
+    background-size: cover;
+    height: 100%;
+    color: #d8e4ea
+}
+
+.re_title1 {
+    font-size: 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 50px;
+}
+
+.re_title2 {
+    text-align: center;
+    font-size: 60px;
+    margin: 30px;
+}
+
+.re_title3 {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+}
+
+.greeting {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+.table {
+    font-size: 25px;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #5e5b5b;
+    padding: 8px;
+    text-align: center;
 }
