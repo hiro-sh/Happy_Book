@@ -114,6 +114,18 @@ def delete_book():
 def mypage_get():
     return render_template("mypage.html")
 
+@app.route("/te_login")
+def te_login_get():
+    return render_template("te_login.html")
+
+@app.route("/st_list")
+def st_list_get():
+    return render_template("st_list.html")
+
+@app.route("/booklist")
+def booklist_get():
+    return render_template("booklist.html")
+
 
 
 if __name__ == '__main__':
