@@ -342,22 +342,23 @@ a.btn--circle:hover {
 
 .record {
 
-    background-image: url(../img/myp.png);
+    background-image: url(../img/kokuba.png);
     background-size: cover;
     height: 100%;
     color: #d8e4ea
 }
 
 .re_title1 {
+    text-align: center;
     font-size: 70px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 50px;
+    padding-top: 60px;
 }
 
 .re_title2 {
     text-align: center;
     font-size: 60px;
-    margin: 30px;
+    margin: 40px;
 }
 
 .re_title3 {
@@ -367,7 +368,7 @@ a.btn--circle:hover {
 }
 
 .greeting {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
     font-size: 40px;
 
