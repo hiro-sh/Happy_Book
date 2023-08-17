@@ -35,12 +35,14 @@ input {
 }
 
 .member-menu {
+
     display: flex;
     align-items: center;
     column-gap: 32px;
 }
 
 .menu-link {
+    font-size: 25px;
     color: #ffffff;
 }
 
@@ -58,6 +60,7 @@ input {
 }
 
 .input-item {
+    font-size: 25px;
     margin-bottom: 30px;
 }
 
