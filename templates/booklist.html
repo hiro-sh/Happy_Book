@@ -4,47 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>読んだ本リスト</title>
+    <title>教師用</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/t_style.css') }}">
 </head>
 
 <body>
-    <h1>〇〇さんの読んだ本リスト</h1>
-    <h2>きょうまで〇さつ読んでいます。</h2>
-    <table>
-        <tr>
-            <th>#</th>
-            <th>本のタイトル</th>
-            <th>著者</th>
-            <th>出版社</th>
-            <th>読んだ日</th>
-            <th>学校図書館の本</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Book 1</td>
-            <td>Author 1</td>
-            <td>Publisher 1</td>
-            <td>Date1</td>
-            <td>〇</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Book 2</td>
-            <td>Author 2</td>
-            <td>Publisher 2</td>
-            <td>Date2</td>
-            <td>〇</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Book 3</td>
-            <td>Author 3</td>
-            <td>Publisher 3</td>
-            <td>Date3</td>
-            <td>null</td>
-        </tr>
-        <!-- 他の本を同じ形式で追加 -->
-    </table>
+    <header class="header">
+        <h1 class="app-title"><a href="/">わたしの本だな（管理画面）</a></h1>
+        <div class="member-menu">
+            <a href="/login" class="menu-link">生徒ログイン画面</a>
+            <a href="/st_list" class="menu-link">もどる</a>
+            <a href="/logout" class="menu-link">ログアウト</a>
+        </div>
+    </header>
+    <main>
+
+        <h1 class="b1_title">〇〇さんの読んだ本リスト</h1>
+        <h2 class="b2_title">きょうまで〇さつ読んでいます。</h2>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>本のタイトル</th>
+                <th>著者</th>
+                <th>出版社</th>
+                <th>読んだ日</th>
+                <th>学校図書館の本</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Book 1</td>
+                <td>Author 1</td>
+                <td>Publisher 1</td>
+                <td>Date1</td>
+                <td>〇</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Book 2</td>
+                <td>Author 2</td>
+                <td>Publisher 2</td>
+                <td>Date2</td>
+                <td>〇</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Book 3</td>
+                <td>Author 3</td>
+                <td>Publisher 3</td>
+                <td>Date3</td>
+                <td>null</td>
+            </tr>
+            <!-- 他の本を同じ形式で追加 -->
+        </table>
+    </main>
 </body>
 
 </html>

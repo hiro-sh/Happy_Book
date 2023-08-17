@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>教師用</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/t_style.css') }}">
 </head>
 
 <body>
     <header class="header">
         <h1 class="app-title"><a href="/">わたしの本だな（管理画面）</a></h1>
         <div class="member-menu">
-            <a href="/add" class="menu-link"></a>
+            <a href="/login" class="menu-link">生徒ログイン画面</a>
             <a href="/myp" class="menu-link"></a>
             <a href="/logout" class="menu-link">ログアウト</a>
         </div>
     </header>
     <main>
         <div class="background">
-            <div class="container">
+            <div class="t_container">
                 <form class="form" action="/login" method="POST">
                     <div class="input-item">
                         <label for="name">ユーザー名</label>
@@ -31,6 +31,20 @@
                         <input type="password" id="password" name="password">
                     </div>
                     <input class="btn btn-primary" type="submit" value="ログイン">
+                </form>
+            </div>
+            <div class="s_container">
+                <h1>生徒登録用</h1>
+                <form class="form" action="/regist" method="POST">
+                    <div class="input-item">
+                        <label for="name">ユーザー名</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="input-item">
+                        <label for="password">パスワード</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="登録する">
                 </form>
             </div>
         </div>

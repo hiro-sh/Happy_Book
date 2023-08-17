@@ -1,0 +1,58 @@
+.s_container {
+    text-align: center;
+    height: 100vh;
+}
+
+video {
+    margin: 50px auto;
+}
+
+.bookdata {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+
+}
+
+.custom-button {
+    border-radius: 5px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 8px 2px;
+    cursor: pointer;
+}
+
+.custom-button1 {
+    border-radius: 5px;
+    background-color: #f11c40;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 8px 2px;
+    cursor: pointer;
+}
+
+.add_title {
+    font-size: 40px;
+    text-align: center;
+    margin: 50px;
+
+}
+
+.book_title {
+    text-align: left;
+    align-content: space-between;
+    font-size: 25px;
+    margin: 50px;
+
+}

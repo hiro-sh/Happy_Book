@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barcode Add</title>
+    <title>わたしの本だな</title>
+    <!--fontAwesomeのCDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add_style.css') }}">
 </head>
-<body>
 
-<h1>この本を本だなに入れる？</h1>
-<img src="https://iss.ndl.go.jp/thumbnail/{{ barcode }}" alt="Book Cover">
+<main class="s_container">
 
-<form action="/add_book" method="post">
-    <input type="hidden" name="barcode" value="{{ barcode }}">
-    <input type="submit" value="本だなに入れる">
-</form>
+    <h1 class="add_title">この本を本だなに入れる？</h1>
+    <div class="bookdata">
+        <img src="https://iss.ndl.go.jp/thumbnail/{{ barcode }}" alt="Book Cover" class="bookimg">
+        <div class="book_title">
+            <h2>タイトル：</h2>
+            <h2>作者（さくしゃ）：</h2>
+            <h2>出版社（しゅっぱんしゃ）：</h2>
+            <h3>日付（ひづけ）：</h3>
+        </div>
+    </div>
+    <form action="/add_book" method="post">
+        <input type="hidden" name="barcode" value="{{ barcode }}">
+        <button type="submit" class="custom-button1">本だなに入れる</button>
+    </form>
 
-<a href="{{ url_for('search_book') }}" class="btn btn-secondary">Scannerに戻る</a>
+    <a href="{{ url_for('search_book') }}" class="custom-button">スキャナーにもどる</a>
 
-<form action="/cancel_add" method="post">
-    <input type="submit" value="本だなにもどる">
-</form>
+    <form action="/cancel_add" method="post">
+        <button type="submit" class="custom-button">本だなにもどる</button>
+    </form>
+</main>
+
 </body>
+
 </html>
